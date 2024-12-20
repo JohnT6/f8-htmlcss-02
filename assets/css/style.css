@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffb900;
+    --font-heading: Sen, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1, 17; /* 117.241% */
+    letter-spacing: -0.116rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 16px; /*Padding trái phải từ 12px đến 16px*/
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 50px; /* cho 50px để cho nút cao 50px lun */
+    border-radius: 999px;
+    background: #171100;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    background: #fffcf4;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px; /*-28px vì lấy 36px - 8px để khi nó neo lại ở trên vẫn còn 8px*/
+    z-index: 1;
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px; /* cho ở dưới có 8px để tránh bên dưới bị dính liền ko có khoảng hở*/
+}
+
+.navbar {
+    margin-left: auto;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    color: #5f5b53;
+    padding: 8px 21px; /*Dùng để tăng vùng bấm*/
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.navbar a:hover,
+.navbar ul li.active a {
+    color: #171100;
+    text-shadow: 1px 0 0 currentColor; /*Do nếu dùng font-weight nó sẽ bị giật các chữ xung quanh nên dùng text-shadow*/
+}
+
+.navbar ul li.active a::after {
+    position: absolute;
+    left: 21px;
+    bottom: 6px;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+}
+
+.header .sign-up-btn {
+    min-width: 144px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
+
+/* Hero */
+.hero {
+    padding: 56px 0 65px;
+    background: #fffcf4;
+}
+
+.body {
+    display: flex;
+}
+
+/* Hero left */
+.hero .media-block {
+    width: 48%; /*Cánh tính lấy width trên file figma là 570 chia cho 1170 rồi nhân cho 100 là ra*/
+}
+
+.hero .media-block .hero-img {
+    display: block;
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero .media-block {
+    position: relative;
+}
+
+.hero .hero-summary {
+    position: absolute;
+    right: 0px;
+    bottom: 48px;
+    width: 270px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero .hero-summary .item {
+    display: flex;
+    align-items: center;
+}
+
+.hero .hero-summary .item + .item {
+    margin-top: 14px;
+}
+
+.hero .hero-summary .info {
+    margin-left: 16px;
+}
+
+.hero .hero-summary .label {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85; /* 185.714% */
+}
+
+.hero .hero-summary .title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66; /* 166.667% */
+}
+
+.hero-summary .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: #fff9e8;
+    border-radius: 50%;
+}
+
+.hero .hero-summary .item:nth-child(2) .icon {
+    background: #fcefff;
+}
+
+.hero .hero-summary .item:last-child .icon {
+    background: #ebeaff;
+}
+
+/* Hero right */
+.hero .hero-content {
+    width: 52%;
+    padding: 64px 0 0 130px;
+}
+
+.hero .hero-content .title {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17; /* 117.241% */
+    letter-spacing: -0.116rem;
+}
+
+.hero .hero-content p.desc {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+    margin-top: 22px;
+}
+
+.hero .hero-content .cta-group {
+    display: flex;
+    margin: 38px 0 48px 0;
+}
+
+.hero .hero-content .hero-cta {
+    min-width: 180px;
+    line-height: 64px;
+    background: #ffb900;
+}
+
+.hero .watch-video {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    padding-right: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hero .watch-video span {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+    margin-left: 14px;
+}
+
+.hero .watch-video:hover {
+    border: 1px solid #ffb900;
+    border-radius: 999px;
+}
+
+.hero .watch-video .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+
+.hero .hero-content p.desc.stats {
+    margin: 8px 0 0 -28px;
+}
+
+.hero .hero-content .stats strong {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.22; /* 122.727% */
+    padding: 0 8px 0 28px;
+}
