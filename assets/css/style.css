@@ -421,6 +421,9 @@ a {
     border-radius: 25px;
     background: #171100;
     border: none;
+    color: #fff;
+    font-family: Poppins;
+    font-weight: 600;
     font-size: 1.4rem;
 }
 
@@ -545,6 +548,9 @@ a {
 }
 
 .features .content .features-cta {
+    color: #fff;
+    font-family: Poppins;
+    font-weight: 600;
     border: none;
     min-width: 137px;
     margin-top: 32px;
